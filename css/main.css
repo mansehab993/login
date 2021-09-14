@@ -1,0 +1,307 @@
+/* start variables */
+:root {
+  --main-color: ;
+}
+/* end variables */
+
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  max-width: 970px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gridy {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  padding: 25px;
+  grid-gap: 20px;
+}
+  /* End Global Rules */
+.login {
+}
+.login .container .contents {
+  display: flex;
+  border: 1px solid white;
+  margin-top: 40px;
+  box-shadow: 0 0 19px 7px #eee;
+  height: calc(100vh - 110px) ;
+  border-radius: 15px;
+  position: relative;
+}
+.login .container .contents i{
+  position: absolute;
+  z-index: 1;
+  color: white;
+  left: 10%;
+  top: 10%;
+  font-size: 8px;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes flash {
+  to {
+    opacity: 0;
+  }
+}
+.login .container .contents i:nth-child(1) {
+  left: 5%;
+  top: 18%;
+  animation-delay: .2s;
+}
+.login .container .contents i:nth-child(2){
+  left: 10%;
+  top: 30%;
+  animation-delay: .4s;
+}
+.login .container .contents i:nth-child(3){
+  left: 10%;
+  top: 7%;
+  animation-delay: .6s;
+}
+.login .container .contents i:nth-child(4){
+  left: 30%;
+  top: 16%;
+  animation-delay: .8s;
+}
+.login .container .contents i:nth-child(5){
+  left: 27%;
+  top: 10%;
+  animation-delay: .9s;
+}
+.login .container .contents i:nth-child(6){
+  left: 18%;
+  top: 17%;
+}
+.login .container .contents .image img{
+  height: 100%;
+}
+.login .container .contents .image {
+  flex-basis: 40%;
+  position: relative;
+}
+.login .container .contents form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 30px 0px;
+}
+.login .container .contents form h3 {
+  display: inline-block;
+  font-weight: normal;
+  padding: 20px 0px 20px 40px;
+  font-size: 15px;
+  width: 30%;
+}
+.main {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 4px;
+}
+.login .container .contents form .name input {
+}
+
+.main::placeholder {
+  color: rgb(194, 194, 194);
+}
+input[type="radio"]+label {
+  cursor: pointer;
+}
+input[type="text"] , input[type="email"] {
+  color: #5acaef;
+}
+input[type="text"]:focus , input[type="email"]:focus {
+  outline-color: #5acaef;
+}
+input[type="radio"] {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: none;
+}
+input#male+label {
+  position: relative;
+  margin-right: 60px;
+}
+input#male+label::before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f222";
+  color: rgb(194, 194, 194);
+  font-size: 20px;
+  padding:12px;
+  position: relative;
+  border-radius: 50%;
+  transition-duration: .3s;
+  margin-right: 5px;
+  font-weight: lighter;
+}
+input#male:checked+label {
+  color: #5acaef;
+}
+input#male:checked+label::before  {
+  background-color: hsl(97deg 56% 61%);
+  color: white;
+  font-size: 25px;
+}
+input#female+label {
+  position: relative;
+}
+input#female+label::before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f221";
+  color: rgb(194, 194, 194);
+  font-size: 20px;
+  padding:10px 12px;
+  position: relative;
+  border-radius: 50%;
+  transition-duration: .2s;
+  margin-right: 5px;
+  font-weight: lighter;
+}
+input#female:checked+label {
+  color: #5acaef;
+}
+input#female:checked+label::before  {
+  background-color: hsl(97deg 56% 61%);
+  color: white;
+  font-size: 25px;
+}
+.contents form .sub {
+  margin-top: 20px;
+}
+.contents form .sub input[type="radio"]+label {
+  padding:5px 25px;
+  text-align: center;
+  font-weight: 400;
+  transition-duration: .2s;
+  margin: 0px 15px 0px 0px;
+  width: 100px;
+  position: relative;
+}
+input#bronze+label {
+  color: #e97d12;
+}
+input#silver+label {
+  color: #868686;
+}
+input#gold+label {
+  color: #ffc400 ;
+}
+input#bronze:checked+label {
+  color: white;
+  background-color: #5acaef;
+  border-radius: 4px;
+}
+input#silver:checked+label {
+  color: white;
+  background-color: #5acaef;
+  border-radius: 4px;
+}
+input#gold:checked+label {
+  color: white;
+  background-color: #5acaef;
+  border-radius: 4px;
+}
+.contents .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.contents .buttons input[type="reset"] {
+  background-color: hsl(0deg 0% 90%);
+  padding: 10px 40px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.contents .buttons input[type="Submit"] {
+  background-color: hsl(97deg 56% 61%);
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-left: 5px;
+}
+@media (max-width:925px) {
+  .login .container .contents .image {
+    display: none;
+  }
+  .login .container .contents form {
+    flex-basis: 100%;
+  }
+  .login .container .contents .gender{
+    /* display: flex; */
+  }
+  input#male+label {
+    margin-right: 0px;
+
+  }
+  .login .container .contents form h3 {
+    display: inline-block;
+    font-weight: normal;
+    padding: 20px 0px 20px 11px;
+    font-size: 11px;
+    width: 30%;
+}
+.contents form .sub input[type="radio"]+label {
+  padding: 5px 3px;
+  text-align: center;
+  font-weight: 400;
+  transition-duration: .2s;
+  margin: 0px 10px 0px 0px;
+  position: relative;
+}
+.login .container .contents .gender {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.contents .buttons {
+  margin-top: 130px; }
+  .login .container .contents {
+    background-image: url(../images/login.png);
+    background-size: cover;
+    position: relative;
+  }
+body {
+    background-image: url(../images/login.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: blur(.1);
+  }
+  .login .container .contents::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    border-radius: 15px;
+  }
+  .login .container .contents form {
+    z-index: 1;
+    color: white;
+  }
+
+}
